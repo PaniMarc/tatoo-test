@@ -1,0 +1,1285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+
+<link rel="stylesheet" href="style.css">
+<head>
+	<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>example</title>
+        ...
+    </head>
+    <body>...</body>
+</html>
+
+	<title>Quiz a risposta multipla - Esempio JavaScript scaricato da HTML.it</title>
+	<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Language" content="it" />
+	<meta name="Robots" content="All" />
+	<meta name="Description" content="HTML.it - il sito italiano sul Web publishing" />
+	<meta name="Keywords" content="Un semplice script per impostare un quiz con risposte multiple. L'importante � non guardare il codice HTML per leggere le risposte." />
+	<meta name="Owner" content="HTML.it srl" />
+	<meta name="Author" content="HTML.it srl" />
+	<meta name="Copyright" content="HTML.it srl" />
+
+<script type="text/javascript" language="JavaScript">
+<!--
+
+
+function quiz() {
+        var i = 0
+	var total=document.forms.length-1
+	var ncorrect=0
+	var response=new Array(total)
+	var theForms=new Array(total)
+	var answer=new Array(total)
+
+	for (i=1; i<=total;i++)
+	theForms[i]=document.forms[i-1]
+
+	for (i=1; i <= total; i++)
+   	response[i]=theForms[i].answer.selectedIndex
+
+	for (i=1; i<=total;i++)
+	answer[i]=theForms[i].correct.value
+
+	var flag=true
+	for (i=1; i <= total; i++)
+   			if (response[i]==0) {
+alert("Attenzione la domanda #"+i+" non ha avuto risposta")
+	flag=false
+	}
+if (flag) {
+for (i=1; i <= total; i++)
+if (response[i]==answer[i]) ncorrect++
+												document.total.score.value = ncorrect
+var per =  Math.round((ncorrect / total) * 100)
+document.total.percent.value = per
+document.total.outof.value=total
+
+} //end if (flag)
+
+}
+
+//-->
+</script>
+
+</head>
+<body >
+<br /><br />
+<div align="center">
+
+	<!-- LOGO -->
+	<header>
+				<img src="logo_htmlit.png" alt="Ops!" class="logo">
+				<h1 class="logo-text"> <font color="073A76">Corso tatuaggio e piercing</h1>
+				<hr>
+		</header>
+
+<P><B><SCRIPT language=Javascript><!--
+document.write(name);
+// -->
+</SCRIPT></B>
+
+<FORM action=esempio.htm method=post name=form1>
+
+	<h1> <font color="073A76">TEST ESAME N. 1</h1>
+
+
+
+<!-------- UC1-------------->
+
+
+
+	<h3> <font color="073A76">UC 1 - Eseguire il piercing, nel rispetto delle norme igieniche e di profilassi</h3>
+
+<!-------- DOMANDA 1 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>1.I tempi di guarigione di un piercing:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A. Dipendono esclusivamente dall'aftercare e dalle caratteristiche individuali del cliente
+<OPTION value=2> B. Variano a seconda della zona del corpo in cui il piercing viene eseguito
+<OPTION value=3> C. I tempi di guarigione per i piercing si aggirano intorno ad una settimana
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=4 type=hidden value=2>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 2 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>2.Con quali materiali è indicato realizzare i gioielli da piercing:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A. Gomma, plastica eva, acciaio chirurgico
+<OPTION value=2> B.	Oro, acciaio chirurgico, argento
+<OPTION value=3> C.	Acciaio chirurgico, teflon, titanio, oro, platino
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=3>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 3 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>3.Quale tra i seguenti prodotti è sconsigliato nella cura di un piercing in via di guarigione:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	Soluzione salina
+<OPTION value=2> B.	Acqua ossigenata
+<OPTION value=3> C.	Sapone battericida
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=2>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 4 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>4.Durante il processo di sterilizzazione con autoclave si ottiene:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	La distruzione dei microrganismi patogeni presenti su un determinato substrato
+<OPTION value=2> B.	La distruzione di tutte le forme viventi, spore escluse, presenti su un determinato substrato
+<OPTION value=3> C.	La distruzione di tutte le forme viventi, spore comprese, presenti su un determinato substrato
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=3>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 5 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>5.Il virus dell&#39;HIV:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	Attacca e distrugge una sottoclasse di linfociti T
+<OPTION value=2> B.	Attacca e distrugge le cellule epatiche
+<OPTION value=3> C.	Viene trasmesso attraverso un vettore
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=1>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 6 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>6.Il periodo d&#39;incubazione dell&#39;Epatite A è di: </b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	1 anno
+<OPTION value=2> B.	Sei mesi
+<OPTION value=3> C.	Circa un mese
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=3>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 7 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>7.La penicillina si ricava:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	Da una pianta
+<OPTION value=2> B.	Da un fungo
+<OPTION value=3> C.	Da un virus
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=2>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 8 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>8.I soggetti portatori sani di una malattia:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	Manifestano la malattia
+<OPTION value=2> B.	Non manifestano la malattia ma possono trasmetterla
+<OPTION value=3> C.	Non manifestano la malattia e non possono trasmetterla
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=2>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 9 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>9.Il periodo d&#39incubazione dell&#39;Epatite B va:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	da 1 a 15 gg
+<OPTION value=2> B.	da 15 a 30gg
+<OPTION value=3> C.	da 50 a 160gg
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=3>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 10 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>10.I batteri sono:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	Organismi Unicellulari
+<OPTION value=2> B.	Organismi con cellula complessa
+<OPTION value=3> C.	Organismi più piccoli dei virus
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=1>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 11 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>11.Le spore batteriche sono:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	Forme batteriche poco resistenti
+<OPTION value=2> B.	Forme batteriche molto resistenti
+<OPTION value=3> C.	Forme batteriche innocue
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=2>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 12 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>12.Una malattia infettiva è:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	Una malattia che si può trasmettere da un individuo ad un altro
+<OPTION value=2> B.	Una malattia provocata solo da virus
+<OPTION value=3> C.	Una malattia provocata da batteri e da virus
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=1>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 13 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>13.L&#39;acronimo AIDS significa:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	Acquired immuno Deficiency sindrome
+<OPTION value=2> B.	Acquired immuno Deficity Syndrome
+<OPTION value=3> C.	Acquired immuno deficiency System
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=1>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 14 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>14.L&#39;HIV si può trasmettere:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	Solo attraverso il sangue
+<OPTION value=2> B.	Solo con il semplice contatto
+<OPTION value=3> C.	Solo attraverso alimenti contaminati
+
+</OPTION>
+</SELECT>
+<INPUT name=correct size=5 type=hidden value=1>
+</FORM>
+
+<hr size="1" width="400" color="gray" noshade>
+
+<!-------- DOMANDA 15 -------------->
+
+<FORM action=esempio.htm method=post name=form1>
+
+<font face="Arial" size="2"><b>15.L&#39;Amuchina usata per disinfettare la cute è:</b></font><br><br>
+
+<SELECT name=answer size=1>
+<OPTION selected value=0>
+<OPTION value=1> A.	Ipoclorito di sodio al 10%
+<OPTION value=2> B.	Ipoclorito di sodio al 100%
+<OPTION value=3> C.	Una composizione di acqua sterile
+</OPTION>
+</SELECT>
+<INPUT name=correct size=4 type=hidden value=2>
+</FORM>
+
+<br>
+
+
+
+<!-------- UC2-------------->
+
+
+
+<h3> <font color="073A76">UC 2 - Eseguire il tatuaggio estetico, nel rispetto delle norme igieniche e di profilassi</h3>
+
+	<!-------- DOMANDA 1 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>1.Nella macchinetta a bobine l&#39;o-ring serve a:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	mantenere l&#39;inclinazione della molla anteriore
+	<OPTION value=2> B.	dare stabilità alla barra di indotto
+	<OPTION value=3> C.	tenere fermo il clipcord
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=1>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 2 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>2 Il tetano è una malattia causata:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	da un virus
+	<OPTION value=2> B.	da un batterio anaerobio
+	<OPTION value=3> C.	da un batterio aerobio
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 3 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>3.L&#39;epidermide è costituita da cinque strati, lo strato germinativo:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	è lo strato più superficiale
+	<OPTION value=2> B.	è lo strato più profondo
+	<OPTION value=3> C.	è uno degli strati intermedi
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 4 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>4.Si definisce allergene una sostanza:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	nociva per la salute dell&#39;uomo
+	<OPTION value=2> B.	che genera sempre una reazione allergica
+	<OPTION value=3> C.	che in alcuni soggetti predisposti può generare un&#39;allergia
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 5 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>5.Durante la fase di guarigione del tatuaggio è sconsigliato:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	usare un sapone neutro
+	<OPTION value=2> B.	fare la doccia
+	<OPTION value=3> C.	fare il bagno
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 6 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>6. Il PH è:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Un sistema per capire se l&#39;alimento si è avariato
+	<OPTION value=2> B.	Un indice di freschezza del prodotto alimentare
+	<OPTION value=3> C.	Un&#39;unità di misura che serve a stabilire il grado di basicità o acidità di una soluzione
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 7 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>7.Quale tra quelle indicate è la tecnica più appropriata per rimuovere un tatuaggio:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	La tecnica laser
+	<OPTION value=2> B.	è fondamentale recarsi dal tatuatore che utilizzerà delle creme abrasive
+	<OPTION value=3> C.	Il metodo corretto è utilizzare dispositivi laser che si possono acquistare in farmacia
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=1>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 8 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>8.Che cos&#39;è l&#39;eczema:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	L&#39;ultimo stadio dell&#39;acne rosacea
+	<OPTION value=2> B.	è una malattia cutanea che provoca infezione
+	<OPTION value=3> C.	è una patologia della pelle che provoca una reazione infiammatoria con prurito e arrossamento
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 9 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>9.Cosa sono le petecchie:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Sono dei piccoli animali rossi che possono pungere l’uomo
+	<OPTION value=2> B.	Sono piccoli puntini rossi piatti, e rotondi che compaiono sulla pelle a causa di emorragia dei capillari
+	<OPTION value=3> C.	Sono delle macchioline rosse causate da una cattiva esposizione solare
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 10-------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>10.I tessuti del corpo sono:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	4
+	<OPTION value=2> B.	5
+	<OPTION value=3> C.	6
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=1>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA  11 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>11.Il PH della pelle è:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Neutro
+	<OPTION value=2> B.	Leggermente acido
+	<OPTION value=3> A.	Basico
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 12 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>12.Da cosa è costituito il sebo prodotto dalle ghiandole sebacee:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Acqua, Sali minerali, ed urea
+	<OPTION value=2> B.	Acqua e Sali minerali
+	<OPTION value=3> C.	Prevalentemente da lipidi
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 13 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>13.Le ghiandole sebacee sono presenti su tutta la superficie della pelle ma sono particolarmente numerose a livello di:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Ascelle ed inguine
+	<OPTION value=2> B.	Palmi delle mani e dei piedi
+	<OPTION value=3> C.	Cuoio capelluto e viso
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 14 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>14.Il dito a scatto è dovuto:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Un restringimento della membrana che circonda il tendine del dito interessato
+	<OPTION value=2> B.	Al diabete
+	<OPTION value=3> C.	Tumore osseo
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=1>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 15 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>15.È possibile tatuare sulle macchie e le cicatrici:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	No
+	<OPTION value=2> B.	Si, ponendo particolare attenzione alla pelle poichè, essa potrebbe risultare delicata
+	<OPTION value=3> C.	Nessuna delle due affermazioni è corretta
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=4 type=hidden value=2>
+	</FORM>
+
+	<br>
+
+
+
+<!-------- UC3-------------->
+
+
+
+	<h3> <font color="073A76">UC 3 - Predisporre e gestire l&#39;accoglienza del cliente</h3>
+
+	<!-------- DOMANDA 1 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>1.Chi effettua un trattamento dati, deve applicare il codice della privacy quando il trattamento riguarda:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Qualsiasi dato di cui uno è in possesso
+	<OPTION value=2> B.	Dati propri
+	<OPTION value=3> C.	Dati riferiti a persone fisiche, giuridiche, enti o associazioni
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 2 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>2.Non si applica il codice della privacy quando:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	La raccolta è effettuata da persona non fisica per uso proprio
+	<OPTION value=2> B.	La raccolta è utilizzabile da persona non fisica utilizzabile da terzi
+	<OPTION value=3> C.	La raccolta è effettuata da persona fisica privata per uso proprio
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 3 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>3.La comunicazione è:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Uno scambio d&#39;informazioni
+	<OPTION value=2> B.	Un modo per conoscere altre persone
+	<OPTION value=3> C.	Un efficace strumento di vendita
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=1>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 4 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>4. Quando si comunica con il cliente è necessario:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Interrompere la comunicazione, per rispondergli velocemente
+	<OPTION value=2> B.	Non interrompere la comunicazione ma una volta compreso il problema o l&#39;esigenza, rispondere in modo solerte ed efficace
+	<OPTION value=3> C.	Farlo attendere fino a che non siamo liberi di rispondere
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 5 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>5.Quali delle seguenti tecniche sono le più efficaci durante la presentazione di un prodotto/servizio:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Esporre con voce forte
+	<OPTION value=2> B.	Esporre con chiarezza e supportare l&#39;esposizione con disegni
+	<OPTION value=3> C.	Esporre con tono autoritario
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 6 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>6.In uno studio per tatuaggi e piercing la sala d&#39;attesa</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Deve essere dotata di un rubinetto con acqua
+	<OPTION value=2> B.	Può essere parte dell&#39;ingresso
+	<OPTION value=3> C.	Deve essere almeno di 20mq
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 7 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>7.L&#39;I.N.A.I.L si occupa:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Di sussidi giornalieri in caso di disoccupazione
+	<OPTION value=2> B.	Liquidazione della pensione
+	<OPTION value=3> C.	Infortuni sul lavoro
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 8 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>8.Il malore è:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Conseguenza di un trauma
+	<OPTION value=2> B.	Conseguenza di un incidente
+	<OPTION value=3> C.	Conseguenza di una malattia cronica o di uno scompenso fisico
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 9 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>9.Quale tra le malattie indicate non può essere conseguenza di un piercing</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	HIV
+	<OPTION value=2> B.	Diabete
+	<OPTION value=3> C.	Epatite C
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 10 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>10.Che cos&#39;è l&#39;I.N.P.S:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Un Ente che assicura diversi tipi di pensione
+	<OPTION value=2> B.	Un Ente che assicura i lavoratori in caso d&#39;infortuni sul lavoro
+	<OPTION value=3> C.	Una società di persone
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=1>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 11 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>11.La sterilizzazione può essere effettuata:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Solo con mezzi fisici
+	<OPTION value=2> B.	Solo con mezzi chimici
+	<OPTION value=3> C.	Con mezzi sia fisici che chimici
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 12 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>12.L&#39;Ossido di Etilene è:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Un mezzo chimico
+	<OPTION value=2> B.	Un mezzo fisico
+	<OPTION value=3> C.	Un mezzo sia fisico che chimico
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=1>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 13 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>Che tipo di lesione è la cicatrice:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Lesione primaria
+	<OPTION value=2> B.	Lesione secondaria
+	<OPTION value=3> C.	Ferita lacero-contusa
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 14 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>14.Lo spinoso è uno strato:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Del derma
+	<OPTION value=2> B.	Dell&#39;ipoderma
+	<OPTION value=3> C.	Dell&#39;Epidermide
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 15 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>15.I pigmenti sono composti da:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Polveri minerali più eccipienti
+	<OPTION value=2> B.	Alcol, glicerina e ossido di ferro
+	<OPTION value=3> C.	Ossido di titanio
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=4 type=hidden value=1>
+	</FORM>
+
+	<br>
+
+
+
+<h3><font color="073A76">UC 4 - Predisposizione, igiene e sicurezza di spazi e attrezzature</h3>
+
+
+	<!-------- DOMANDA 1 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>1.Quale tra le seguenti caratteristiche non influisce sulla disinfezione di uno strumento:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	La carica microbica
+	<OPTION value=2> B.	Il tempo di esposizione al disinfettante
+	<OPTION value=3> C.	Il materiale di cui è fatto lo strumento
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 2 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>2.Il consenso informato deve essere sottoscritto:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Solo dai clienti che lo richiedono
+	<OPTION value=2> B.	Da tutti i clienti
+	<OPTION value=3> C.	Solo dai clienti minorenni
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 3 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>Quale tra questi compiti sono indicati nel T.U.81/08?</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	I lavoratori si devono limitare a rispettare le nuove norme
+	<OPTION value=2> B.	Devono contribuire all'adempimento di tutti gli obblighi imposti e possono verificare mediante un loro rappresentante, la corretta applicazione delle misure di sicurezza e di tutela della salute
+	<OPTION value=3> C.	I lavoratori possono solo esprimere opinioni sulle norme di sicurezza da attuare
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 4 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>4.Che cos'è il Servizio Prevenzione e Protezione? </b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	È una associazione di lavoratori impegnati in attività di prevenzione e protezione degli infortuni
+	<OPTION value=2> B.	È una struttura ospedaliera dove vengono curati gli infortunati ai quali viene spiegato come evitare gli infortuni sul lavoro
+	<OPTION value=3> C.	È l'insieme delle persone, dei sistemi e dei mezzi interni ed esterni all'azienda finalizzati all'attività di prevenzione e protezione dai rischi
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 5 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>5. Il Rappresentante dei Lavoratori per la Sicurezza (RLS) è:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Persona designata dal datore di lavoro dotata di specifici requisiti e capacità professionali
+	<OPTION value=2> B.	Un sindacalista preposto a rappresentare il lavoratore nell'ambito di vertenze contro il datore di lavoro
+	<OPTION value=3> C.	Una persona ovvero persone, eletta designata per rappresentare i lavoratori per quanto concerne gli aspetti della salute e della sicurezza durante il lavoro
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 6 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>6.Relativamente alla sicurezza sul lavoro, il lavoratore:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Non ha compiti e responsabilità forniti dalla legge
+	<OPTION value=2> B.	Ha compiti e responsabilità sanzionati penalmente in caso di inadempienza
+	<OPTION value=3> C.	Compiti e responsabilità sono in capo unicamente al datore di lavoro
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 7 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>7.Per asciugarsi le mani dopo essersele lavate è opportuno usare asciugamani in stoffa anche di uso promiscuo che in ogni caso sono sempre opportunamente lavati</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Asciugamani in stoffa anche di uso promiscuo che in ogni caso sono sempre opportunamente lavati
+	<OPTION value=2> B. Asciugamani in stoffa anche di uso promiscuo a condizione siano periodicamente sterilizzati
+	<OPTION value=3> C.	Asciugamani di carta a perdere
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 8 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>Per sterilizzare in autoclave servono:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	127° per 30/40 minuti
+	<OPTION value=2> B.	220° per 75 minuti
+	<OPTION value=3> C.	160° per 60 minuti
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=1>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 9 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>9.Per esercitare l’attività di tatuatore è obbligatorio stipulare un contratto per lo smaltimento dei rifiuti sanitari pericolosi</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Si
+	<OPTION value=2> B.	No
+	<OPTION value=3> C.	Nessuna delle due risposte è corretta
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=1>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 10 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>10.Nel caso che una persona sia colpita da scarica elettrica e che rimanga a contatto con il cavo a bassa tensione, il soccorritore dovrà:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Rimanere a distanza di sicurezza
+	<OPTION value=2> B.	Prenderla per un braccio e tentare di staccarla dalla sorgente elettrica
+	<OPTION value=3> C.	Staccarla dalla sorgente elettrica facendo uso di un attrezzo di materiale isolante come ad esempio il legno
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 11 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>11. Il D.Lgs 81/08 cosa disciplina:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	L’integrazione di persone disabili nella società
+	<OPTION value=2> B.	La sicurezza sui luoghi di lavoro
+	<OPTION value=3> C.	Il sistema pensionistico italiano
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 12 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>12.La sterilizzazione è un processo che:</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Può avvenire solo con l'utilizzo di specifiche sostanze chimiche
+	<OPTION value=2> B.	Permette la completa eliminazione di tutti i microrganismi o forme viventi presenti su un dato oggetto
+	<OPTION value=3> C.	Può avvenire solo attraverso l'utilizzo di un'autoclave
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 13 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>13.Come si interviene per soccorrere persone che abbiano perso conoscenza</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A.	Si lasciano o si adagiano semplicemente in posizione prona
+	<OPTION value=2> B.	Si dispongono su un fianco sollevando un braccio ed una gamba
+	<OPTION value=3> C.	Si bagna loro la fronte con acqua fredda
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=2>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 14 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>14.Come intervenire in presenza di una persona in stato di shock?</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A. Lasciarla tranquilla alleggerendole l'abbigliamento per evitare che sudi
+	<OPTION value=2> B. Somministrarle liquore o caffè per farla riprendere
+	<OPTION value=3> C. Adagiarla in posizione supina e coprirla, cercando di muoverla meno possibile
+
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=5 type=hidden value=3>
+	</FORM>
+
+	<hr size="1" width="400" color="gray" noshade>
+
+	<!-------- DOMANDA 15 -------------->
+
+	<FORM action=esempio.htm method=post name=form1>
+
+	<font face="Arial" size="2"><b>15.Come accompagnare un infortunato con una lesione leggera in grado di camminare?</b></font><br><br>
+
+	<SELECT name=answer size=1>
+	<OPTION selected value=0>
+	<OPTION value=1> A. Procurargli un paio di stampelle
+	<OPTION value=2> B.	Portarlo a spalle
+	<OPTION value=3> C.	Metterglisi al fianco dal lato della lesione cingendogli la vita con il braccio, se possibile
+	</OPTION>
+	</SELECT>
+	<INPUT name=correct size=4 type=hidden value=3>
+	</FORM>
+
+	<br>
+
+
+
+
+
+
+
+
+
+
+
+<FORM action=TriviaQuiz.html method=post name=total>
+<INPUT name=Button onclick=quiz() type=button value="Clicca qui per il risultato">
+
+<br><br>
+
+<B><SCRIPT language=Javascript><!--
+document.write(name);
+// -->
+</SCRIPT></B> Hai risposto correttamente a <INPUT name=score size=2> domande su un totale di <INPUT name=outof size=2><br><br>
+Hai ottentuo una percentuale di valutazione pari a <INPUT name=percent size=2>%<BR>
+
+
+</div>
+<br /><br /><br /><br /><br /><br />
+	<div align="center">
+<a href="https://www.gesforsrl.it/formazione/"><img src="logo_htmlit.png" title="Vai al sito" alt="Visita il sito: www.gesforsrl.it/formazione/ " border="0" width="150" height="40" /></a>
+	</div>
+
+
+</body>
+</html>
